@@ -4,93 +4,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>My Classic Portfolio</title>
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJv3W7gKxkjoWzjG8dP6gQVVzHt62tGEgSvkzEovGF1l3OITFjvG8I6A0b3k" crossorigin="anonymous">
+    <!-- Google Fonts for Classic Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Custom Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Blue Gradient Background */
         .hero-section {
-            background-color: #333;
+            background: linear-gradient(135deg, #3a8ee6, #1d6bb1);
             color: #fff;
-            padding: 100px 0;
+            padding: 80px 0;
             text-align: center;
         }
 
-        .hero-section h1 {
-            font-size: 3em;
+        /* Custom Typography for Classic Style */
+        h1, h2 {
+            font-family: 'Merriweather', serif;
         }
 
-        .project-card {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+        /* About Section */
+        .about {
+            padding: 60px 20px;
+            background-color: #ffffff;
+            text-align: center;
         }
 
-        .project-card:hover {
+        .about h2 {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 80px 20px;
+            background: #eef6ff;
+        }
+
+        .portfolio .project-card {
+            background-color: #fff;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .portfolio .project-card:hover {
             transform: translateY(-10px);
         }
 
-        .contact-form input,
-        .contact-form textarea {
+        .portfolio img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 20px;
+            background: #1d6bb1;
+            color: white;
+        }
+
+        .contact h2 {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .contact .form-control {
             border-radius: 5px;
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+
+        .contact button {
+            background-color: #3a8ee6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 1.1em;
+        }
+
+        .contact button:hover {
+            background-color: #1d6bb1;
+            cursor: pointer;
         }
 
         footer {
             background-color: #333;
-            color: #fff;
+            color: white;
             text-align: center;
             padding: 10px;
+        }
+
+        /* Unique Layout for Portfolio Cards */
+        .project-card {
+            text-align: center;
+        }
+
+        .project-title {
+            font-size: 1.6em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .project-description {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #777;
+        }
+
+        .project-link {
+            text-decoration: none;
+            font-weight: bold;
+            color: #1d6bb1;
+        }
+
+        .project-link:hover {
+            color: #3a8ee6;
         }
     </style>
 </head>
 
 <body>
-
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hi, I'm <strong>Naran Pariyar</strong>, a passionate government officer with a background in Business Studies (BBS). I have basic knowledge in computer science and IT. Explore my work below!</p>
+            <h1>Welcome to My Classic Portfolio</h1>
+            <p>Hi, I'm <strong>Naran Pariyar</strong>, a government officer with a background in Business Studies (BBS). I have a passion for technology and basic knowledge of Computer Science and IT. Explore my work and experience below!</p>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
-        <div class="container text-center">
+    <section id="about" class="about">
+        <div class="container">
             <h2>About Me</h2>
-            <p>I am a dedicated government officer with an interest in technology. I have a strong academic background in Business Studies (BBS) and basic knowledge in Computer Science (CS) and IT. My goal is to leverage my skills and knowledge to make meaningful contributions in my work and in the tech field.</p>
+            <p>I am a dedicated government officer with a background in Business Studies (BBS). My journey in the world of technology began with my fascination with computers and programming. I have acquired basic knowledge in Computer Science and IT, and I aim to combine my skills and experience to make meaningful contributions to my work.</p>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5">
-        <div class="container text-center">
-            <h2>My Portfolio</h2>
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="text-center">My Portfolio</h2>
             <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card project-card">
-                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Project 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 1</h5>
-                            <p class="card-text">This is a brief description of project 1. It highlights some of the work done.</p>
-                        </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/300" alt="Project 1">
+                        <div class="project-title">Project 1</div>
+                        <div class="project-description">This project involves a simple application for data management. It's designed with basic programming principles and aims to provide a streamlined experience for users.</div>
+                        <a href="#" class="project-link">View More</a>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card project-card">
-                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Project 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 2</h5>
-                            <p class="card-text">This is a brief description of project 2. It highlights some of the work done.</p>
-                        </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/300" alt="Project 2">
+                        <div class="project-title">Project 2</div>
+                        <div class="project-description">This is a project about managing personal finances, built with JavaScript and some backend support. It's a perfect tool for those looking to organize their financial goals.</div>
+                        <a href="#" class="project-link">View More</a>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card project-card">
-                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Project 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Project 3</h5>
-                            <p class="card-text">This is a brief description of project 3. It highlights some of the work done.</p>
-                        </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/300" alt="Project 3">
+                        <div class="project-title">Project 3</div>
+                        <div class="project-description">An interactive web app for event planning, built to streamline communication and keep track of deadlines and tasks effectively.</div>
+                        <a href="#" class="project-link">View More</a>
                     </div>
                 </div>
             </div>
@@ -98,20 +198,14 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light">
-        <div class="container text-center">
+    <section id="contact" class="contact">
+        <div class="container">
             <h2>Contact Me</h2>
-            <form class="contact-form">
-                <div class="mb-3">
-                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="mb-3">
-                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                </div>
-                <div class="mb-3">
-                    <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-dark">Send Message</button>
+            <form>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
         </div>
     </section>
