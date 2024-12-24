@@ -2,222 +2,635 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Classic Portfolio</title>
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJv3W7gKxkjoWzjG8dP6gQVVzHt62tGEgSvkzEovGF1l3OITFjvG8I6A0b3k" crossorigin="anonymous">
-    <!-- Google Fonts for Classic Look -->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-        }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>krishna thapaliya (bibek)</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-        /* Blue Gradient Background */
-        .hero-section {
-            background: linear-gradient(135deg, #3a8ee6, #1d6bb1);
-            color: #fff;
-            padding: 80px 0;
-            text-align: center;
-        }
+  <!-- Favicons -->
+  <!-- <link href="assets/img/maobadi.png" rel="icon">
+  <link href="assets/img/maobadi.png" rel="apple-touch-icon"> -->
 
-        /* Custom Typography for Classic Style */
-        h1, h2 {
-            font-family: 'Merriweather', serif;
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-        /* About Section */
-        .about {
-            padding: 60px 20px;
-            background-color: #ffffff;
-            text-align: center;
-        }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-        .about h2 {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
-        }
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Aakriti';
+      src: url('assets/font/Abhinav Regular.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'Ananda';
+      src: url('assets/font/Ananda 5 Regular.otf') format('truetype');
+    }
+    @font-face {
+            font-family: 'maya';
+      src: url('assets/font/Himchuli Bold.ttf') format('truetype');
+    }
 
-        .about p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            font-family: 'Roboto', sans-serif;
-        }
+    @font-face {
+      font-family: 'shree';
+      src: url('assets/font/Shrinagar Regular.ttf') format('truetype');
+    }
+    
 
-        /* Portfolio Section */
-        .portfolio {
-            padding: 80px 20px;
-            background: #eef6ff;
-        }
-
-        .portfolio .project-card {
-            background-color: #fff;
-            padding: 30px;
-            margin: 20px 0;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .portfolio .project-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .portfolio img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 60px 20px;
-            background: #1d6bb1;
-            color: white;
-        }
-
-        .contact h2 {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .contact .form-control {
-            border-radius: 5px;
-            margin-bottom: 15px;
-            padding: 15px;
-        }
-
-        .contact button {
-            background-color: #3a8ee6;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 15px;
-            font-size: 1.1em;
-        }
-
-        .contact button:hover {
-            background-color: #1d6bb1;
-            cursor: pointer;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-
-        /* Unique Layout for Portfolio Cards */
-        .project-card {
-            text-align: center;
-        }
-
-        .project-title {
-            font-size: 1.6em;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .project-description {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-            color: #777;
-        }
-
-        .project-link {
-            text-decoration: none;
-            font-weight: bold;
-            color: #1d6bb1;
-        }
-
-        .project-link:hover {
-            color: #3a8ee6;
-        }
-    </style>
+  </style>
+  <!-- =======================================================
+  * Template Name: Folio
+  * Template URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
+  * Updated: Aug 08 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
-<body>
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <img src="assets/img/maobadi.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+        <h1 style="font-family: 'Aakriti', sans-serif; color: #d60808;font-size: 48px; text-shadow: 0 0 2px white, 0 0 4px white;" class="sitename">dfcf]jfbL</h1>
+      </a>
+
+
+
+     
+    
+
+
+
+
+
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a style="font-family: 'shree', sans-serif; color: #e20505; font-size: 24px; text-shadow: 0 0 2px white, 0 0 4px white;" 
+               href="#hero" class="active shiny-text">
+              <b>u[xk[i7</b>
+            </a>
+          </li>
+          <li>
+            <a style="font-family: 'shree', sans-serif; color: #f30a0a; font-size: 24px; text-shadow: 0 0 2px white, 0 0 4px white;" 
+               href="#about"  class="active shiny-text">
+              <b>af/]df</b>
+            </a>
+          </li>
+          <li>
+            <a style="font-family: 'shree', sans-serif; color: #f30a0a; font-size: 24px; text-shadow: 0 0 2px white, 0 0 4px white;" 
+               href="#portfolio"  class="active shiny-text">
+              <b>kl/ro</b>
+            </a>
+          </li>
+          <li>
+            <a style="font-family: 'shree', sans-serif; color: #f30a0a; font-size: 24px; text-shadow: 0 0 2px white, 0 0 4px white;" 
+               href="#contact" class="active shiny-text">
+              <b>;Dks{</b>
+            </a>
+          </li>
+          
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <h1>Welcome to My Classic Portfolio</h1>
-            <p>Hi, I'm <strong>Naran Pariyar</strong>, a government officer with a background in Business Studies (BBS). I have a passion for technology and basic knowledge of Computer Science and IT. Explore my work and experience below!</p>
-        </div>
-    </section>
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/known.jpeg" alt="" data-aos="fade-in">
+      container
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      
+        <h2 style="font-family: 'Aakriti', sans-serif; color: #d60808;">s[i0f axfb'/ yklnof<br> ljj]s</h2>
+
+        <p style="color: rgb(26, 32, 59);">म <span class="typed" data-typed-items="सामाजिक कार्यकर्ता, नेता, नीतिनिर्माता">सामाजिक कार्यकर्ता</span> हुँ।</p>
+        <div class="social-links">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+         </div>
+      </div>
+
+    </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am a dedicated government officer with a background in Business Studies (BBS). My journey in the world of technology began with my fascination with computers and programming. I have acquired basic knowledge in Computer Science and IT, and I aim to combine my skills and experience to make meaningful contributions to my work.</p>
-        </div>
-    </section>
+    <section id="about" class="about section">
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2 class="text-center">My Portfolio</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/300" alt="Project 1">
-                        <div class="project-title">Project 1</div>
-                        <div class="project-description">This project involves a simple application for data management. It's designed with basic programming principles and aims to provide a streamlined experience for users.</div>
-                        <a href="#" class="project-link">View More</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/300" alt="Project 2">
-                        <div class="project-title">Project 2</div>
-                        <div class="project-description">This is a project about managing personal finances, built with JavaScript and some backend support. It's a perfect tool for those looking to organize their financial goals.</div>
-                        <a href="#" class="project-link">View More</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/300" alt="Project 3">
-                        <div class="project-title">Project 3</div>
-                        <div class="project-description">An interactive web app for event planning, built to streamline communication and keep track of deadlines and tasks effectively.</div>
-                        <a href="#" class="project-link">View More</a>
-                    </div>
-                </div>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up" >
+        <h2 style="font-family: 'shree', sans-serif; color: #e20505; font-size: 48px; text-shadow: 0 0 2px white, 0 0 4px white ;" >af/]df</h2>
+
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-between">
+          <div class="col-lg-4 profile-img align-self-start">
+            <img src="assets/img/me.jpeg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-7 content">
+            <h3 style="font-family: 'maya', sans-serif; color: #e20505; font-size: 32px";>/fi6«k|]dn] dft[e"ldsf] ;Ddfg / ;dfhk|ltsf] lhDd]jf/LnfO{ hf]8\b} ;a} gful/snfO{ ;dfg cj;/ / Pstfsf] efjgf k|bfg ub{5. o;n] ;+:s[lt, k/Dk/f, / ;|f]tx¿sf] ;+/If0f;Fu} b]zsf] ;d[l4df ;xsfo{ / ;xof]unfO{ k|]l/t u5{.</h3>
+              <p style="font-family: 'Ananda', sans-serif; color: #e20505; font-size: 24px";>
+                /fi6«k|]dn] dft[e"ldk|ltsf] ulx/f] dfof / cfkm\gf] ;dfhk|ltsf] pQ/bfloTjnfO{ hf]8\b5. o;n] x/]s gful/snfO{ ;dfg dxQ\j lbG5, hxfF sf]xL klg hft, ju{, jf cfly{s cj:yfsf sf/0f kfvf gk/f]:. 
+  
+  b]zk|]dn] /fli6«o PstfnfO{ ;'b[9 ub{} x/]s JolQmnfO{ cfkm\gf] of]ubfgn] ;dfhnfO{ cl3 a9fpg k|]l/t ub{5. of] ljrf/n] b]zsf] ;+:s[lt, k/Dk/f, / k|fs[lts ;|f]tx¿sf] ;+/If0f ub{} ;a}nfO{ ;dfg cj;/ k|bfg ug{] nIo /fV5. 
+  
+  cfkm\gf] df6f], efiff, / k/Dk/fk|lt uj{ ub{}, b]zk|]dn] ;xsfo{ / ;xof]usf] efjgf km}nfpF5. /fi6«k|]d eg]sf] cfkm\gf] sd{ / cfbz{dfkm{t dft[e"ldnfO{ pGgltsf] af6f]df cl3 a9fpg' xf].
+            </p>
+            <!-- <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+            </ul> -->
+          </div>
+        </div>
+
+      </div>
+
+    <!-- </section>/About Section -->
+
+    <!-- Services Section -->
+    <!-- <section id="services" class="services section"> -->
+
+      <!-- Section Title -->
+      <!-- <div class="container section-title" data-aos="fade-up"> -->
+        <!-- <h2>Services</h2> -->
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      <!-- </div>End Section Title -->
+
+      <!-- <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+            <div>
+              <h4 class="title">Lorem Ipsum</h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
             </div>
-        </div>
-    </section>
+          </div> -->
+          <!-- End Service Item -->
 
+          <!-- <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+            <div>
+              <h4 class="title">Dolor Sitema</h4>
+              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div> -->
+          <!-- </div>End Service Item -->
+
+          <!-- <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+            <div>
+              <h4 class="title">Sed ut perspiciatis</h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div> -->
+          <!-- </div>End Service Item -->
+
+          <!-- <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+            <div>
+              <h4 class="title">Magni Dolores</h4>
+              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div> -->
+          <!-- </div>End Service Item -->
+
+          <!-- <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+            <div>
+              <h4 class="title">Nemo Enim</h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div> -->
+          <!-- </div>End Service Item -->
+
+          <!-- <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+            <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+            <div>
+              <h4 class="title">Eiusmod Tempor</h4>
+              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              <a href="service-details.html" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div> -->
+          <!-- </div>End Service Item -->
+
+        <!-- </div>
+
+      </div> -->
+
+    <!-- </section> -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>प्रशंसाहरू</h2>
+        <p>हाम्रा सेवाबारेका केही अद्भुत अनुभवहरू पढ्नुहोस्।</p>
+      </div><!-- End Section Title -->
+    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>प्रदीप श्रेष्ठ</h3>
+                <h4>व्यवसायी</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>तपाईंहरूको सेवा अत्यन्तै उत्कृष्ट छ। समयमै काम सम्पन्न गर्ने तपाईंहरूको प्रतिबद्धता प्रेरणादायक छ। मेरो अनुभवलाई अझ सहज र प्रभावकारी बनाउन तपाईंहरूको भूमिकाको उच्च प्रशंसा गर्दछु।</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>रमा खनाल</h3>
+                <h4>शिक्षिका</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>सेवाको गुणस्तर र टीमको व्यावसायिकता साँच्चै प्रभावकारी छ। मैले कहिल्यै यति सहज र सन्तोषजनक अनुभव गरेकी थिइनँ। तपाईंहरूको प्रयासलाई धन्यवाद दिन चाहन्छु।</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>सूरज खड्का</h3>
+                <h4>ग्राफिक डिजाइनर</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>तपाईंहरूको सेवाले मेरो जीवनमा ठूलो सहजता ल्याएको छ। तपाईंहरूको समर्थन र समर्पणले मलाई साँच्चै प्रभाव पारेको छ। मेरो मनदेखि धन्यवाद।</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>माया थापा</h3>
+                <h4>फ्रिल्यान्सर</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>तपाईंहरूको ग्राहक-मैत्री व्यवहार र समयमै काम सम्पन्न गर्ने शैली साँच्चै सराहनीय छ। यसप्रकारको अनुभव पाउनु विशेष कुरा हो। तपाईंहरूलाई शुभकामना।</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+    
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>राजेश अधिकारी</h3>
+                <h4>उद्यमी</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>मेरो आवश्यकतालाई बुझेर तपाईंहरूले दिएको सेवा एकदमै उत्कृष्ट थियो। तपाईंहरूको प्रयास र निष्ठालाई म सँधै सम्झिरहनेछु। धन्यवाद!</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+    
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+    
+      </div>
+    
+    </section><!-- /Testimonials Section -->
+    
+
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>पोर्टफोलियो</h2>
+        <p>कामहरूको दृश्यता र प्रभावकारीता। राजनीति र नेतृत्वको क्षेत्रका उत्कृष्ट कार्यहरूको फोटो संग्रह।</p>
+      </div><!-- End Section Title -->
+    
+      <div class="container">
+    
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+    
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">सबै</li>
+            <li data-filter=".filter-app">नेतृत्व</li>
+            <li data-filter=".filter-product">दृष्टिकोण</li>
+            <li data-filter=".filter-branding">परिवर्तन</li>
+            <li data-filter=".filter-books">सेवा</li>
+          </ul><!-- End Portfolio Filters -->
+    
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+    
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>नेतृत्व १ - जनताको सेवा</h4>
+                  <p>राजनीतिक जागरूकता र जनता संगको सीधा सम्पर्कका लागि तयार गरिएका नेतृत्व।</p>
+                  <a href="assets/img/portfolio/2.jpeg" title="नेतृत्व १ - जनताको सेवा" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://www.everestface.com/detail/153" title="अधिक विवरण" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+    
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/3.jpeg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>दृष्टिकोण १ - जनसेवा पहल</h4>
+                  <p>राजनीतिक परिवर्तन र विकासका लागि महत्वपूर्ण दृष्टिकोण।</p>
+                  <a href="assets/img/portfolio/4.JPG" title="दृष्टिकोण १ - जनसेवा पहल" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="weblink" title="अधिक विवरण" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+    
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/5.jpeg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>परिवर्तन १ - जनतासँगको सम्पर्क</h4>
+                  <p>जनताको भरोसा र समर्थन जित्नका लागि डिजायन गरिएका परिवर्तन कार्यक्रमहरू।</p>
+                  <a href="assets/img/portfolio/6.jpeg" title="परिवर्तन १ - जनतासँगको सम्पर्क" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="weblink" title="अधिक विवरण" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+    
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/7.JPG" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>किताबहरू १ - नीति र योजना</h4>
+                  <p>राजनीतिक विचारधारा र नीति निर्माणको क्षेत्रका विविध पुस्तिकाहरू।</p>
+                  <a href="assets/img/portfolio/8.JPG" title="किताबहरू १ - नीति र योजना" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="weblink" title="अधिक विवरण" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/3.jpeg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>दृष्टिकोण १ - जनसेवा पहल</h4>
+                  <p>राजनीतिक परिवर्तन र विकासका लागि महत्वपूर्ण दृष्टिकोण।</p>
+                  <a href="assets/img/portfolio/4.JPG" title="दृष्टिकोण १ - जनसेवा पहल" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="weblink" title="अधिक विवरण" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+    
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>नेतृत्व १ - जनताको सेवा</h4>
+                  <p>राजनीतिक जागरूकता र जनता संगको सीधा सम्पर्कका लागि तयार गरिएका नेतृत्व।</p>
+                  <a href="assets/img/portfolio/2.jpeg" title="नेतृत्व १ - जनताको सेवा" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="weblink" title="अधिक विवरण" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div> -->
+            <!-- </div>End Portfolio Item -->
+    
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/3.jpeg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>दृष्टिकोण १ - जनसेवा पहल</h4>
+                  <p>राजनीतिक परिवर्तन र विकासका लागि महत्वपूर्ण दृष्टिकोण।</p>
+                  <a href="assets/img/portfolio/4.JPG" title="दृष्टिकोण १ - जनसेवा पहल" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="weblink" title="अधिक विवरण" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+    
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/5.jpeg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>परिवर्तन १ - जनतासँगको सम्पर्क</h4>
+                  <p>जनताको भरोसा र समर्थन जित्नका लागि डिजायन गरिएका परिवर्तन कार्यक्रमहरू।</p>
+                  <a href="assets/img/portfolio/6.jpeg" title="परिवर्तन १ - जनतासँगको सम्पर्क" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="weblink" title="अधिक विवरण" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+    
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/7.JPG" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>किताबहरू १ - नीति र योजना</h4>
+                  <p>राजनीतिक विचारधारा र नीति निर्माणको क्षेत्रका विविध पुस्तिकाहरू।</p>
+                  <a href="assets/img/portfolio/8.JPG" title="किताबहरू १ - नीति र योजना" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="weblink" title="अधिक विवरण" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/3.jpeg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>दृष्टिकोण १ - जनसेवा पहल</h4>
+                  <p>राजनीतिक परिवर्तन र विकासका लागि महत्वपूर्ण दृष्टिकोण।</p>
+                  <a href="assets/img/portfolio/4.JPG" title="दृष्टिकोण १ - जनसेवा पहल" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="weblink" title="अधिक विवरण" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+    
+           
+    
+    
+        </div><!-- End Isotope Layout -->
+    
+      </div><!-- End Container -->
+    
+    </section><!-- End Portfolio Section -->
+    
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form>
-                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="font-family: 'shree', sans-serif; color: #e20505; font-size: 48px; text-shadow: 0 0 2px white, 0 0 4px white ;">;Dks{</h2>
+        <p>मनको कोष्ठकमा, सम्बन्धका नयनहरू बुनिन्छ। दूरीको छायामा पनि, दिलका पुल हर कदममा प्रकट हुन्छ।
+
+          सम्पर्क, साँच्चैको सम्पर्क, जीवनको नाता हो, हर साँसमा, हर धडकामा।</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-5">
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>ठेगाना</h3>
+                  <p>बेनीघाट रोराङ, धादिङ, बागमती, नेपाल</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>फोन<br></h3>
+                  <p>+977-xxxxxxxxxx</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>इमेल</h3>
+                  <p>info@example.com</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Naran Pariyar. All Rights Reserved.</p>
-    </footer>
+        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
+          <div class="row gy-4">
 
-    <!-- Bootstrap JS and Popper.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybF2D1tKAt7DoP5F6gX0lTzpsj0L8y1pmE2g88FGM5mW9yE3zT" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0dp3SxL3g8A9G0G63J2u5K40wF5jpN5Y2Tb5H24lZl+cRO2y" crossorigin="anonymous"></script>
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+            </div>
+
+            <div class="col-md-6 ">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+            </div>
+
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+            </div>
+
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+
+              <button type="submit">सन्देश पठाउनुहोस्</button>
+            </div>
+
+          </div>
+        </form><!-- End Contact Form -->
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+  <footer id="footer" class="footer light-background">
+    <div class="container">
+     
+      <p style="font-family: 'Ananda';font-size: 48px;">ljlgdosf] kydf, ;"o{ ls/0fx¿ h:t} rDsG5 ;DaGw. b"/Lsf] 5fofdf klg, cGt/fTdf e]l6G5G Ps cs{fnfO{.
+
+        dgsf] tl:a/df, k|]d / ;dk{0fsf] /+u e5{G. ;DaGwsf] c8fgdf, ;fFRr} ;Dks{sf] dfw'o{ kfpg kfOG5.
+        
+        cf;x¿nfO{ ;fyL agfpF5, ;kgf h'g a]udf x'G5, ;xh ¿kdf ljtfpF5 ;+jfbsf] uLt.
+        
+        Åbosf] k'n ag]/, ;Dks{ hLjgsf] w/f]x/, x/ kudf x/ sbddf, ;Dks{, cl:tTjsf] gftf agfpF5.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-tiktok"></i></a>
+      </div>
+      
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
